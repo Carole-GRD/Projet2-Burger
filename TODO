@@ -1,0 +1,57 @@
+Commandes
+----------
+'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
+'Tab Ctrl+Enter' // Triggers `Todo: Toggle Box` 
+'Alt+Enter' // Triggers `Todo: Toggle Box`
+'Alt+D' // Triggers `Todo: Toggle Done`
+'Alt+C' // Triggers `Todo: Toggle Cancelled`
+'Alt+S' // Triggers `Todo: Toggle Start`
+'Cmd/Ctrl+Shift+A' // Triggers  `Todo: Archive`
+
+✔ validator burger + ajout dans burger-router @done(22-08-02 11:59)
+✔ validator order + ajout dans order-router @done(22-08-02 12:00)
+
+
+✔ auth-controller ->  register  + l'ajouter dans auth-router @done(22-08-02 13:33)
+✔ auth-controller  ->   login    + l'ajouter dans auth-router @done(22-08-02 14:54)
+
+
+✔ jwt-utils @done(22-08-03 09:30)
+    ✔ generate    +   l'ajouter dans auth-controller @done(22-08-02 15:37)
+    ✔ decode      +   l'ajouter dans auth-controller @done(22-08-03 09:30)
+
+
+✔ auth-validator (login et register) + ajout dans auth-router @done(22-08-03 09:53)
+après avoir fait le "login" et le "register"
+☐ supprimer ou commenter "create" dans "user-controller.js"
+☐ supprimer ou commenter "post" dans "user-router.js"
+
+✔ auth-jwt-validation (middleware) @done(22-08-03 13:48)
+
+✔ query -> offset, limit et status @done(22-08-03 15:05)
+
+✔ ajouter authentication dans les router ATTENTION @done(22-08-03 15:05)
+    -> à faire en dernier sinon on ne peut plus tester dans insomnia
+
+
+
+✔ ingédients supplémentaires @done(22-08-04 11:19)
+-> tableau ['oignons', 'salade', 'tomates', 'moutarde']
+-> ATTENTION : retirer tous les burgers et les commandes dans insomnia et les refaire car on change le model donc ils ne correspondent plus !
+
+☐ allergen
+-> soit vérifier le boolean  et obtenir tous ceux qui sont à false
+-> soit faire un tableau avec les allergen (lactose, gluten) et faire en sorte d'obtenir tous les burgers qui n'ont pas cet (ces) allergen(s) 
+
+☐ middlewares supplémentaires
+    ☐ user 
+        ☐ getById -> le user veut voir les infos sur son compte 
+    ☐ order
+        ☐ getById -> le user veut voir une commande en particulier
+        ☐ getByUser -> le user veut voir toutes ses commandes
+-> comparer l'id du req.params.id à l'id du decodedToken
+
+
+☐  remettre authentication dans les router ATTENTION
+
+
