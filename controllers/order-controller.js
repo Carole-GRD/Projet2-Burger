@@ -31,10 +31,6 @@ const orderController = {
         })
         .populate({
             path : 'burgers.burgerId',
-            populate : {
-                path : 'Ingredient',
-                select : { viande : 1, pain : 1, garniture : 1, sauce : 1 }
-            },
             select : { burgerName : 1, price : 1 }
         })
         .limit(limit)

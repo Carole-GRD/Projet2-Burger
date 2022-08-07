@@ -1,23 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const ingredientSchema = new Schema({
-    viande : {
-        type : String,
-        trim : true
-    },
-    pain : {
-        type : String,
-        trim : true
-    },
-    garniture : {
-        type : String,
-        trim : true
-    },
-    sauce : {
-        type : String,
-        trim : true
-    },
-    poisson : {
+    name : {
         type : String,
         trim : true
     }

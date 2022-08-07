@@ -1,4 +1,5 @@
 const Burger = require("../models/burger-model");
+const { populate } = require("../models/ingredient-model");
 
 
 const burgerController = {
@@ -25,13 +26,13 @@ const burgerController = {
         }
 
         const burgers = await Burger.find(allergenFilter)
-        .select({ 
-            burgerName : 1, 
-            ingredient : 1, 
-            allergen : 1, 
-            price : 1, 
-            availability : 1
-        })
+        // .select({ 
+        //     burgerName : 1, 
+        //     ingredient : 1,
+        //     allergen : 1, 
+        //     price : 1, 
+        //     availability : 1
+        // })
         .limit(limit)
         .skip(offset);
         res.status(200).json(burgers);
@@ -60,10 +61,10 @@ const burgerController = {
     update : async (req, res) => {
         
         const id = req.params.id;
-        const { burgerName, ingredients, allergen, price, availability } = req.body;
+        const { burgerName, ingredient, allergen, price, availability } = req.body;
         const burgerToUpdate = await Burger.findByIdAndUpdate(id, {
             burgerName,
-            ingredients,
+            ingredient,
             allergen,
             price,
             availability

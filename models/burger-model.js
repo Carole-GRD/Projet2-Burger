@@ -8,27 +8,10 @@ const burgerSchema = new Schema({
         unique : true,
         trim : true
     },
-    ingredient : [{ 
-        viande : {
-            type : Types.ObjectId,    
-            ref : Ingredient,
-            require : true
-        },   
-        pain : {
-            type : Types.ObjectId,    
-            ref : Ingredient,
-            require : true
-        }, 
-        garniture : [{
-            type : Types.ObjectId,    
-            ref : Ingredient,
-            require : true
-        }], 
-        sauce : {
-            type : Types.ObjectId,    
-            ref : Ingredient,
-            require : true
-        }           
+    ingredientId : [{ 
+        type : Types.ObjectId,    
+        ref : Ingredient,
+        require : true
     }],
     allergen : [{
         type : String,

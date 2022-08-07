@@ -26,9 +26,9 @@ const ingredientController = {
     update : async (req, res) => {
 
         const id = req.params.id;
-        const { ingredient } = req.body;
+        const { name } = req.body;
         const ingredientToUpdate = await Ingredient.findByIdAndUpdate(id, {
-            ingredient
+            name
         }, { returnDocument : 'after'});
         if (!ingredientToUpdate) {
             res.sendStatus(404);
