@@ -9,9 +9,26 @@ const burgerSchema = new Schema({
         trim : true
     },
     ingredient : [{ 
+        viande : {
             type : Types.ObjectId,    
             ref : Ingredient,
             require : true
+        },   
+        pain : {
+            type : Types.ObjectId,    
+            ref : Ingredient,
+            require : true
+        }, 
+        garniture : [{
+            type : Types.ObjectId,    
+            ref : Ingredient,
+            require : true
+        }], 
+        sauce : {
+            type : Types.ObjectId,    
+            ref : Ingredient,
+            require : true
+        }           
     }],
     allergen : [{
         type : String,

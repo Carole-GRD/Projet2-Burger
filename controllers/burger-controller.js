@@ -25,7 +25,13 @@ const burgerController = {
         }
 
         const burgers = await Burger.find(allergenFilter)
-        .select({ burgerName : 1, ingredients : 1, allergen : 1, price : 1, availability : 1})
+        .select({ 
+            burgerName : 1, 
+            ingredient : 1, 
+            allergen : 1, 
+            price : 1, 
+            availability : 1
+        })
         .limit(limit)
         .skip(offset);
         res.status(200).json(burgers);

@@ -1,7 +1,11 @@
 const yup = require('yup');
 
 const ingredientValidator = yup.object({
-    ingredient : yup.string().trim()
+    viande : yup.string().trim(),
+    pain : yup.string().trim(),
+    garniture : yup.array().of(yup.string().trim()),
+    sauce : yup.string().trim(),
+    poisson : yup.string().trim()
 });
 
 module.exports = ingredientValidator;
