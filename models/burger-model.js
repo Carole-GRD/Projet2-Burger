@@ -8,17 +8,17 @@ const burgerSchema = new Schema({
         unique : true,
         trim : true
     },
-    ingredientId : [{ 
-        type : Types.ObjectId,    
-        ref : Ingredient,
-        require : true
-    }],
-    // ingredient : [{
-    //     ingredientId : { 
+    // ingredientId : [{ 
     //     type : Types.ObjectId,    
     //     ref : Ingredient,
-    //     require : true}
+    //     require : true
     // }],
+    ingredient : [{
+        name : { 
+        type : Types.ObjectId,    
+        ref : Ingredient,
+        require : true}
+    }],
     allergen : [{
         type : String,
         enum : ['lactose', 'gluten', 'none'],
