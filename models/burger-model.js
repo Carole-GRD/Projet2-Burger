@@ -13,6 +13,12 @@ const burgerSchema = new Schema({
         ref : Ingredient,
         require : true
     }],
+    // ingredient : [{
+    //     ingredientId : { 
+    //     type : Types.ObjectId,    
+    //     ref : Ingredient,
+    //     require : true}
+    // }],
     allergen : [{
         type : String,
         enum : ['lactose', 'gluten', 'none'],

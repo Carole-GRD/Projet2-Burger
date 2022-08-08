@@ -33,6 +33,10 @@ const burgerController = {
         //     price : 1, 
         //     availability : 1
         // })
+        .populate({
+            path : 'ingredientId',
+            select : { name : 1 }
+        })
         .limit(limit)
         .skip(offset);
         res.status(200).json(burgers);
